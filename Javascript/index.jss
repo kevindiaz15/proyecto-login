@@ -1,23 +1,14 @@
-const form = document.querySelector('form');
-const usernameInput = document.querySelector('#username');
-const passwordInput = document.querySelector('#password');
+var nombreUsuario = "usuarioprueba123";
+var contrasena = "12345";
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  
-  const username = usernameInput.value;
-  const password = passwordInput.value;
-  
-  if (username === 'myusername' && password === 'mypassword') {
-    // Store the username in localStorage
-    localStorage.setItem('username', username);
-    alert('Logged in successfully!');
-  } else {
-    alert('Incorrect username or password.');
-  }
-});
+function autenticacion(usuario, ingreseContrasena) {
+    usuario; 
+    ingreseContrasena;
 
-const loggedInUser = localStorage.getItem('username');
-if (loggedInUser) {
-  alert(`Welcome back, ${loggedInUser}!`);
+    if (nombreUsuario===usuario) {
+        alert ("autenticacion correcta");
+        }else if (nombreUsuario != usuario || contrasena != ingreseContrasena) {
+
+        }
 }
+autenticacion(prompt("ingrese usuario"),prompt("ingreseContrasena"));
